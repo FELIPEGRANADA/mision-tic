@@ -1,2 +1,9 @@
 # mision-tic
-Proyecto correspondiente al reto del ciclo 3 de desarrollo web.
+The project contains the challenge of the third cycle of web development.
+
+Members: 
+Lina Caro
+Héctor Hostos
+Jorge Portela
+Yerson Suárez
+Felipe Granada
