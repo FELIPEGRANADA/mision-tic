@@ -6,7 +6,7 @@ We are a team of enthusiastic programmers currently doing the 3rd cycle of Misio
 - ✨Have fun!✨ 
 ## Our Team
 [Yerson Zubieta](https://github.com/yerson117) is\
-[Lina Caro](https://github.com/Linamcaro) is\
+[Lina Caro](https://github.com/Linamcaro) is a financial engineer / Data analyst. She loves sports and the tech world.\ 
 [Jorge Portela](https://github.com/) is\
 [Héctor Hostos](https://github.com/hhostos) is an Electronics Engineer. He enjoys teamwork, biking and learning.\
 [Luis Felipe Granada](https://github.com/FELIPEGRANADA) is a systems engineer. He loves programming and learning new technologies. He likes to ride a motorcycle.
