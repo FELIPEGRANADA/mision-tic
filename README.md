@@ -9,7 +9,7 @@ We are a team of enthusiastic programmers currently doing the 3rd cycle of Misio
 [Lina Caro](https://github.com/Linamcaro) is\
 [Jorge Portela](https://github.com/) is\
 [Héctor Hostos](https://github.com/hhostos) is an Electronics Engineer. He enjoys teamwork, biking and learning.\
-[Luis Felipe Granada](https://github.com/FELIPEGRANADA) is
+[Luis Felipe Granada](https://github.com/FELIPEGRANADA) is a systems engineer. He loves programming and learning new technologies. He likes to ride a motorcycle.
 ## Tech
 We use a number of tools to work properly:
 - HTML - HyperText Mark-up Language.
