@@ -18,10 +18,6 @@ We are a team of enthusiastic programmers currently doing the 3rd cycle of Misio
 ## About the project
 Analyze, design and build a software application that allows a manufacturing company to control the physical and online sales and do the corresponding follow-up.
 
-## Methodology
-The project development was approached through agile methodologies, using the Scrum framework, consisting of a process that is applied regularly and frequently to good practices to work collaboratively as a team and obtain the best possible result from a project.
-
-
 ## Tech
 To carry out this project we are using the following tools:
 - HTML - HyperText Mark-up Language.
