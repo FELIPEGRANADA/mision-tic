@@ -10,8 +10,12 @@ We are a team of enthusiastic programmers currently doing the 3rd cycle of Misio
 [Jorge Portela](https://github.com/) is\
 [Héctor Hostos](https://github.com/hhostos) is an Electronics Engineer. He enjoys teamwork, biking and learning.\
 [Luis Felipe Granada](https://github.com/FELIPEGRANADA) is a systems engineer. He loves programming and learning new technologies. He likes to ride a motorcycle.
+
+## About the project
+Analyze, design and build a software application that allows a manufacturing company to control the physical and online sales and do the corresponding follow-up.
+
 ## Tech
-We use a number of tools to work properly:
+To carry out this project we are using the following tools:
 - HTML - HyperText Mark-up Language.
 - CSS - Cascading Style Sheets.
 - Javascript - High-level, JIT-compiled, multiparadigm programming language.
