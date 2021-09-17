@@ -6,7 +6,7 @@ We are a team of enthusiastic programmers currently doing the 3rd cycle of Misio
 - ✨Have fun!✨ 
 ## Our Team
 [Yerson Zubieta](https://github.com/yerson117) is a Industrial Engineer / Data Scientist / Bizagi Developer Analyst. He likes to read, listen to music ... but what He likes the most is **learning**.\
-[Lina Caro](https://github.com/Linamcaro) is a financial engineer / Data Scientist. She loves sports and the tech world.\    
+[Lina Caro](https://github.com/Linamcaro) is a financial engineer / data scientist. She loves sports and the tech world.\    
 [Jorge Portela](https://github.com/jorgeportela22) is a biomedical engineer. He is happy about this project.\
 [Héctor Hostos](https://github.com/hhostos) is an electronics engineer. He enjoys teamwork, biking and learning.\
 [Luis Felipe Granada](https://github.com/FELIPEGRANADA) is a systems engineer. He loves programming and learning new technologies. He likes to ride a motorcycle.\
