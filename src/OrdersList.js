@@ -3,7 +3,7 @@ import './OrdersList.css';
 import OrderForm from './OrderForm';
 import OrderDetail from './OrderDetail';
 
-// Class Component OrdersList
+// Class OrdersList Component 
 class OrdersList extends React.Component{
 
     // Constructor of the class
@@ -11,38 +11,28 @@ class OrdersList extends React.Component{
         super(props);
         this.registerOrder = this.registerOrder.bind(this);
         this.detailOrder = this.detailOrder.bind(this);
-        this.state = {orderMode: 1};
+        this.state = {selectedComponent: <TableOrders onClickNew={this.registerOrder} onClickDetail={this.detailOrder}/>};
     }
 
+    // Show Order Register Form
     registerOrder(){
-        this.setState({orderMode: 2});
+        this.setState({selectedComponent: <OrderForm />});
     }
 
+    // Show Order Detail
     detailOrder(){
-        this.setState({orderMode: 3});
+        this.setState({selectedComponent: <OrderDetail />});
     }
 
+    // Method Render the component
     render() {
-        const orderMode = this.state.orderMode;
-
-        if(orderMode === 1){
-            return(
-                <TableOrders onClickNew={this.registerOrder} onClickDetail={this.detailOrder}/>
-            );
-        }
-        else if(orderMode === 2){
-            return(
-                <OrderForm />
-            );
-        }
-        else if(orderMode === 3){
-            return(
-                <OrderDetail />
-            );
-        }         
+        return(
+            this.state.selectedComponent    
+        );
     }
 }
 
+// TableOrders Component
 function TableOrders(props){
     return(  
         <div className="ordersList-box">

@@ -2,34 +2,30 @@ import React from 'react';
 import './OrderForm.css';
 import OrdersList from './OrdersList';
 
+// Class OrderForm Component 
 class OrderForm extends React.Component{
 
     // Constructor of the class
     constructor(props) {
         super(props);
         this.listOrders = this.listOrders.bind(this);
-        this.state={isListOrders:false};
+        this.state={selectedComponent: <FormComponent onClickRegister={this.listOrders}/>};
     }
 
+    // Show list orders
     listOrders(){
-        this.setState({isListOrders:true})
+        this.setState({selectedComponent: <OrdersList/>})
     }
 
+    // Method Render the component
     render(){
-        if(this.state.isListOrders === false)
-        {
             return(
-                <FormComponent onClickRegister={this.listOrders}/>
+                this.state.selectedComponent
             );
-        }
-        else{
-            return(
-                <OrdersList/>
-            );
-        }
     }
 }
 
+// Form Component
 function FormComponent(props){
     return(
         <div className="orderForm-box">

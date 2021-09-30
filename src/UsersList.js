@@ -2,35 +2,30 @@ import React from 'react';
 import './UsersList.css';
 import UserForm from './UserForm';
 
-// Class Component UsersList
+// Class UsersList Component 
 class UsersList extends React.Component{
 
     // Constructor of the class
     constructor(props) {
         super(props);
         this.registerUser = this.registerUser.bind(this);
-        this.state = {isRegisterUser: false};
+        this.state = {selectedComponent: <TableUsers onClickNew={this.registerUser} />};
     }
 
+    // Show User Register Form
     registerUser(){
-        this.setState({isRegisterUser: true});
+        this.setState({selectedComponent: <UserForm />});
     }
 
+    // Method Render the component
     render() {
-        if(this.state.isRegisterUser === false)
-        {
-            return(
-                <TableUsers onClickNew={this.registerUser}/>
-            );
-        }
-        else{
-            return(
-              <UserForm />  
-            );
-        }
-    }
+        return(
+            this.state.selectedComponent
+        );
+    }    
 }
 
+// TableUsers Component
 function TableUsers(props){
     return(
         <div className="usersList-box">

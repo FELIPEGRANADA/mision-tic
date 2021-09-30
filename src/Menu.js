@@ -5,7 +5,7 @@ import OrdersList from './OrdersList';
 import ProductsList from './ProductsList';
 import UsersList from './UsersList';
 
-// Class Component Menu
+// Class Menu Component 
 class Menu extends React.Component{
 
     // Constructor of the class

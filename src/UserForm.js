@@ -2,34 +2,30 @@ import React from 'react';
 import './UserForm.css';
 import UsersList from './UsersList';
 
+// Class UserForm Component 
 class UserForm extends React.Component{
 
     // Constructor of the class
     constructor(props) {
         super(props);
         this.listUsers = this.listUsers.bind(this);
-        this.state={isListUsers:false};
+        this.state={selectedComponent: <ComponentForm onClickRegister={this.listUsers} />};
     }
 
+    // Show list users
     listUsers(){
-        this.setState({isListUsers:true})
+        this.setState({selectedComponent: <UsersList />})
     }
 
+    // Method Render the component
     render(){
-        if(this.state.isListUsers === false)
-        {
-            return(
-                <ComponentForm onClickRegister={this.listUsers}/>
-            );
-        }
-        else{
-            return(
-                <UsersList/>
-            );
-        }
+        return(
+            this.state.selectedComponent
+        );
     }
 }
 
+// Form Component
 function ComponentForm(props){
     return(
         <div className="userForm-box">

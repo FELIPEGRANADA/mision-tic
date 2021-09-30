@@ -1,7 +1,7 @@
 .App {
     margin:0;
     padding: 0;
-    background: url("https://www.sofia-rtd.com/blog/wp-content/uploads/2017/05/rascacielos-desde-una-vista-de-angulo-bajo_1359-159.jpg") no-repeat center top;
+    background: url("Media/Fondo.jpg") no-repeat center top;
     background-size: cover;
     height: 100vh;
     color: #fff;

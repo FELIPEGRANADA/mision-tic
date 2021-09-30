@@ -2,35 +2,30 @@ import React from 'react';
 import './OrderDetail.css';
 import OrdersList from './OrdersList';
 
-// Class Component OrderDetail
+// Class OrderDetail Component 
 class OrderDetail extends React.Component{
 
     // Constructor of the class
     constructor(props) {
         super(props);
         this.listOrders = this.listOrders.bind(this);
-        this.state={isListOrders:false};
+        this.state={selectedComponent: <TableDetails onClickBack={this.listOrders} />};
     }
 
+    // Show list orders
     listOrders(){
-        this.setState({isListOrders:true})
+        this.setState({selectedComponent: <OrdersList />})
     }
 
+    // Method Render the component
     render() {
-        if(this.state.isListOrders === false)
-        {
             return(
-                <TableDetails onClickBack={this.listOrders}/>
-            );
-        }
-        else{
-            return(
-              <OrdersList />  
-            );
-        }
+                this.state.selectedComponent
+            );      
     }
 }
 
+// TableDetails Component
 function TableDetails(props){
     return(
         <div className="orderDetail-box">

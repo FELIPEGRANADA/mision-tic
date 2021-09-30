@@ -2,35 +2,30 @@ import React from 'react';
 import './ProductsList.css';
 import ProductForm from './ProductForm';
 
-// Class Component ProductsList
+// Class ProductsList Component
 class ProductsList extends React.Component{
 
     // Constructor of the class
     constructor(props) {
         super(props);
         this.registerProduct = this.registerProduct.bind(this);
-        this.state = {isRegisterProduct: false};
+        this.state = {selectedComponent: <TableProducts onClickNew={this.registerProduct}/>};
     }
 
+    // Show Product Register Form
     registerProduct(){
-        this.setState({isRegisterProduct: true});
+        this.setState({selectedComponent: <ProductForm />});
     }
 
+    // Method Render the component
     render() {
-        if(this.state.isRegisterProduct === false)
-        {
-            return(
-                <TableProducts onClickNew={this.registerProduct}/>
-            );
-        }
-        else{
-            return(
-              <ProductForm />  
-            );
-        }
-    }
+        return(
+            this.state.selectedComponent
+        );
+    }   
 }
 
+// TableProducts Component
 function TableProducts(props){
     return(
         <div className="productsList-box">

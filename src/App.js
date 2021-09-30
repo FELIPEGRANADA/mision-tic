@@ -1,6 +1,7 @@
 import './App.css';
 import Login from './Login';
 
+// Application Initial Component
 function App() {
   return (
     <div className="App">

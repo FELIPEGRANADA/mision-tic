@@ -3,7 +3,7 @@ import './Login.css';
 import Menu from './Menu';
 import logo from './Media/Logo.png';
 
-// Class Component Login
+// Class Login Component
 class Login extends React.Component{
 
     // Constructor of the class
@@ -13,6 +13,7 @@ class Login extends React.Component{
         this.state = {isLoggedIn: false};
     }
 
+    // Method to indicate successfully login
     loginApp(){
         this.setState({isLoggedIn: true});
     }
@@ -23,7 +24,7 @@ class Login extends React.Component{
         {
             return (
                 <div className="login-box">
-                    <img className= "logo" src ={logo} alt="online-store logo"/>
+                    <img className= "logo" src ={logo} alt="Terrier beverages logo"/>
                     <h1>Sign in</h1>
                     <form>  
                         <input className="login-input" type="email" placeholder="Email" />
