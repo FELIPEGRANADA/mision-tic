@@ -1,7 +1,7 @@
 .App {
     margin:0;
     padding: 0;
-    background: url("./media/Fondo.jpg") no-repeat center top;
+    background: url("media/Fondo.jpg") no-repeat center top;
     background-size: cover;
     height: 100vh;
     color: #fff;

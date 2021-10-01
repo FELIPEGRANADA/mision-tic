@@ -34,7 +34,7 @@ class Login extends React.Component{
                         <a href="">Forgot Password</a>
                         <button type='submit' className= 'login-button'>
                             <img src= {gicon} alt='Logo Google' className='googlelogo' />
-                             <span className='signingoogle'> Continue with Google </span>
+                             <span> Continue with Google </span>
                         </button>
                     </form>
                 </div>
