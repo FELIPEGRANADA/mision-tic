@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProductsList.css';
+import '../styles/ProductsList.css';
 import ProductForm from './ProductForm';
 
 // Class ProductsList Component

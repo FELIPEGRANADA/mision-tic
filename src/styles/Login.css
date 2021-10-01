@@ -1,6 +1,6 @@
 .login-box{
     width: 320px;
-    height: 500px;
+    height: 580px;
     background-color: rgb(34,34,34, 0.6);
     color: #fff;    
     position: relative;
@@ -54,3 +54,28 @@
 .login-box a:hover {
     color: #fff;
 }
+
+.login-button{
+    background-color: #4285f4;
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+  
+  .login-button .googlelogo{
+      width: 25px;
+      height: 25px;
+      border-radius: 20px;
+      margin-right: 20px;
+      
+  }

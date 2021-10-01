@@ -1,7 +1,8 @@
 import React from 'react';
-import './Login.css';
+import '../styles/Login.css';
 import Menu from './Menu';
-import logo from './Media/Logo.png';
+import logo from '../media/Logo.png';
+import gicon from '../media/google-g-icon.png';
 
 // Class Login Component
 class Login extends React.Component{
@@ -31,6 +32,10 @@ class Login extends React.Component{
                         <input className="login-input" type = "password" placeholder="Password" />
                         <button className="sign-in" onClick={this.loginApp}>Sign in</button>
                         <a href="">Forgot Password</a>
+                        <button type='submit' className= 'login-button'>
+                            <img src= {gicon} alt='Logo Google' className='googlelogo' />
+                             <span className='signingoogle'> Continue with Google </span>
+                        </button>
                     </form>
                 </div>
             );

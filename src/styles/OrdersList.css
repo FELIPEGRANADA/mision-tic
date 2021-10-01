@@ -27,7 +27,7 @@
     background: #3E0668 ;
     color: #fff;
     border-radius: 4px;
-    background:  url("Media/button_Details.png") no-repeat center top;
+    background:  url("../media/button_Details.png") no-repeat center top;
     background-size: cover;
     width: 40px;
     height: 20px;
