@@ -21,18 +21,28 @@
     cursor: pointer;
 }
 
-.button-details{
+.button{
     border: none;
     outline: none;
-    background: #3E0668 ;
-    color: #fff;
     border-radius: 4px;
-    background:  url("../media/button_Details.png") no-repeat center top;
     background-size: cover;
     width: 40px;
     height: 20px;
     font-size: 16px;
     cursor: pointer;
+}
+
+.button-details{
+    background:  url("../media/button_Details.png") no-repeat center top;
+}
+
+
+.button-edit{  
+    background:  url("../media/button_Edit.png") no-repeat center top; 
+}
+
+.button-remove{
+    background:  url("../media/button_Remove.png") no-repeat center top;
 }
 
 .table-bordered {

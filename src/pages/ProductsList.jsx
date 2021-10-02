@@ -2,6 +2,13 @@ import React from 'react';
 import '../styles/ProductsList.css';
 import ProductForm from './ProductForm';
 
+const dataLoad = [
+    { code: 1, description: "Vino", unitValue: 95000, state: "Disponible"},
+    { code: 2, description: "Champagne", unitValue: 254000, state: "No disponible"},
+    { code: 3, description: "Vodka", unitValue: 80000, state: "Disponible"},
+    { code: 4, description: "Tequila", unitValue: 120000, state: "Disponible"}
+  ];
+
 // Class ProductsList Component
 class ProductsList extends React.Component{
 
@@ -9,18 +16,28 @@ class ProductsList extends React.Component{
     constructor(props) {
         super(props);
         this.registerProduct = this.registerProduct.bind(this);
-        this.state = {selectedComponent: <TableProducts onClickNew={this.registerProduct}/>};
+        this.state = {selectedComponent: 1,
+                      data: dataLoad
+                     };
     }
 
     // Show Product Register Form
     registerProduct(){
-        this.setState({selectedComponent: <ProductForm />});
+        this.setState({selectedComponent: 2});
     }
 
     // Method Render the component
     render() {
+        let component;
+        if(this.state.selectedComponent === 1){
+            component = <TableProducts onClickNew={this.registerProduct} dataTable={this.state.data}/>; 
+        }
+        else if(this.state.selectedComponent === 2){
+            component = <ProductForm />;   
+        }
+
         return(
-            this.state.selectedComponent
+            component
         );
     }   
 }
@@ -40,21 +57,21 @@ function TableProducts(props){
                         <th>Description</th>
                         <th>Unit Value</th>
                         <th>State</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Vino</td>
-                        <td>95000</td>
-                        <td>Disponible</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Champagne</td>
-                        <td>254000</td>
-                        <td>No disponible</td>
-                    </tr>
+                    {props.dataTable.map((product) => (
+                        <tr key={product.code}>
+                            <td>{product.code}</td>
+                            <td>{product.description}</td>
+                            <td>{product.unitValue}</td>
+                            <td>{product.state}</td>
+                            <td><button className="button button-edit" onClick={props.onClickNew}></button></td>
+                            <td><button className="button button-remove"></button></td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         </div>

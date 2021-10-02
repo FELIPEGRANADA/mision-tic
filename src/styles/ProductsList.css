@@ -21,6 +21,25 @@
     cursor: pointer;
 }
 
+.button{
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-size: cover;
+    width: 40px;
+    height: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-edit{  
+    background:  url("../media/button_Edit.png") no-repeat center top; 
+}
+
+.button-remove{
+    background:  url("../media/button_Remove.png") no-repeat center top;
+}
+
 .table-bordered {
     width: 100%;
     text-align: left;

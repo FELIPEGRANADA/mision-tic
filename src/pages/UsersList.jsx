@@ -2,6 +2,11 @@ import React from 'react';
 import '../styles/UsersList.css';
 import UserForm from './UserForm';
 
+const dataLoad = [
+    { code: 1, user: "HHOSTOS", email: "hhostos@udea.edu.co", password: 12345, rol: "administrador", state: "Autorizado"},
+    { code:2, user: "YSUAREZ", email: "ysuarez@udea.edu.co", password: 546321, rol: "vendedor", state: "Pendiente"}
+  ];
+
 // Class UsersList Component 
 class UsersList extends React.Component{
 
@@ -9,18 +14,28 @@ class UsersList extends React.Component{
     constructor(props) {
         super(props);
         this.registerUser = this.registerUser.bind(this);
-        this.state = {selectedComponent: <TableUsers onClickNew={this.registerUser} />};
+        this.state = {selectedComponent: 1, 
+                      data: dataLoad
+                     };
     }
 
     // Show User Register Form
     registerUser(){
-        this.setState({selectedComponent: <UserForm />});
+        this.setState({selectedComponent: 2});
     }
 
     // Method Render the component
     render() {
+        let component;
+        if(this.state.selectedComponent === 1){
+            component = <TableUsers onClickNew={this.registerUser} dataTable={this.state.data}/>; 
+        }
+        else if(this.state.selectedComponent === 2){
+            component = <UserForm />;   
+        }
+
         return(
-            this.state.selectedComponent
+            component
         );
     }    
 }
@@ -41,23 +56,22 @@ function TableUsers(props){
                         <th>Password</th>
                         <th>Rol</th>
                         <th>State</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>HHOSTOS</td>
-                        <td>hhostos@udea.edu.co</td>
-                        <td>12345</td>
-                        <td>Administrador</td>
-                        <td>Autorizado</td>
-                    </tr>
-                    <tr>
-                        <td>YSUAREZ</td>
-                        <td>ysuarez@udea.edu.co</td>
-                        <td>546321</td>
-                        <td>Vendedor</td>
-                        <td>Pendiente</td>
-                    </tr>
+                    {props.dataTable.map((user) => (
+                        <tr key={user.code}>
+                            <td>{user.user}</td>
+                            <td>{user.email}</td>
+                            <td>{user.password}</td>
+                            <td>{user.rol}</td>
+                            <td>{user.state}</td>
+                            <td><button className="button button-edit" onClick={props.onClickNew}></button></td>
+                            <td><button className="button button-remove"></button></td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         </div>
