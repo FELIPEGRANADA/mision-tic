@@ -68,8 +68,8 @@ function TableProducts(props){
                             <td>{product.description}</td>
                             <td>{product.unitValue}</td>
                             <td>{product.state}</td>
-                            <td><button className="button button-edit" onClick={props.onClickNew}></button></td>
-                            <td><button className="button button-remove"></button></td>
+                            <td><button className="fas fa-edit" onClick={props.onClickNew}></button></td>
+                            <td><button className="fas fa-trash-alt"></button></td>
                         </tr>
                     ))}
                 </tbody>

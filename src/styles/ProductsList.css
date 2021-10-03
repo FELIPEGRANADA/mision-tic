@@ -1,8 +1,11 @@
 .productsList-box{
-    width: 100%;
+    width: 97%;
     height: 100%;
     background-color: rgb(34,34,34, 0.6);
     color: #fff; 
+    position: relative;
+    align-self: right;
+    left: 2%;
     box-sizing: border-box;
     padding: 30px 30px;
     text-align: left;
@@ -33,11 +36,11 @@
 }
 
 .button-edit{  
-    background:  url("../media/button_Edit.png") no-repeat center top; 
+    background:  url("../Media/button_Edit.png") no-repeat center top; 
 }
 
 .button-remove{
-    background:  url("../media/button_Remove.png") no-repeat center top;
+    background:  url("../Media/button_Remove.png") no-repeat center top;
 }
 
 .table-bordered {

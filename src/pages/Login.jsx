@@ -1,8 +1,8 @@
 import React from 'react';
 import '../styles/Login.css';
 import Menu from './Menu';
-import logo from '../media/Logo.png';
-import gicon from '../media/google-g-icon.png';
+import logo from '../Media/Logo.png';
+import gicon from '../Media/google-g-icon.png';
 
 // Class Login Component
 class Login extends React.Component{

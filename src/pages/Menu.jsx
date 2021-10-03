@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Menu.css';
-import logo from '../media/Logo.png';
+import logo from '../Media/Logo.png';
 import OrdersList from './OrdersList';
 import ProductsList from './ProductsList';
 import UsersList from './UsersList';

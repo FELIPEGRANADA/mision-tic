@@ -1,8 +1,11 @@
 .ordersList-box{
-    width: 100%;
+    width: 97%;
     height: 100%;
     background-color: rgb(34,34,34, 0.6);
     color: #fff; 
+    position: relative;
+    align-self: right;
+    left: 2%;
     box-sizing: border-box;
     padding: 30px 30px;
     text-align: left;
@@ -31,18 +34,16 @@
     font-size: 16px;
     cursor: pointer;
 }
-
-.button-details{
-    background:  url("../media/button_Details.png") no-repeat center top;
+thead tr{
+    font-size: 18px;
+    text-align: center;
 }
-
-
-.button-edit{  
-    background:  url("../media/button_Edit.png") no-repeat center top; 
+tbody tr{
+    text-align: center;
 }
-
-.button-remove{
-    background:  url("../media/button_Remove.png") no-repeat center top;
+.fa-eye{
+    opacity: .8;
+    border: transparent;
 }
 
 .table-bordered {

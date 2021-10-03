@@ -18,18 +18,20 @@ class OrdersList extends React.Component{
     constructor(props) {
         super(props);
         this.registerOrder = this.registerOrder.bind(this);
-        this.state = {selectedComponent: 1,
-                      data: dataLoad,
-                      selectedOrder:{code: "", 
-                                     total: "", 
-                                     registerDate: "", 
-                                     identification: "", 
-                                     name: "", 
-                                     salesman: ""
-                                    }                     
-                    };
+        this.state = {
+            selectedComponent: 1,
+            data: dataLoad,
+            selectedOrder:{
+                code: "", 
+                total: "", 
+                registerDate: "", 
+                identification: "", 
+                name: "", 
+                salesman: ""
+            },
+            showHideSearchFilter: false                      
+        };
     }
-
     // Show Order Register Form
     registerOrder(){
         this.setState({selectedComponent: 2});
@@ -51,11 +53,26 @@ class OrdersList extends React.Component{
     // Method Render the component
     render() {
         let component;
+        const x = this.state.showHideSearchFilter;
+        var showSearchFilter= e =>
+        {
+            this.setState({showHideSearchFilter: !this.state.showHideSearchFilter});
+        }
         if(this.state.selectedComponent === 1){
             component = <div className="ordersList-box">
                             <div>
                                 <h1>Orders</h1>
                                 <button className="new-order" onClick={this.registerOrder}>New +</button>
+                            <button className="Search-Order" onClick={showSearchFilter}>{x ? 'Seraching By':'Serach'}</button>
+                            {
+                                x && (
+                                <select name="searchFilter" placeholder="Atribute">
+                                    <option value="Code">Code</option>
+                                    <option value="Identification">Identification</option>
+                                    <option value="Name">Name</option>
+                                </select>
+                                )
+                            }
                             </div>
                             <table className="table-bordered">
                                 <thead>
@@ -79,10 +96,10 @@ class OrdersList extends React.Component{
                                             <td>{order.registerDate}</td>
                                             <td>{order.identification}</td>
                                             <td>{order.name}</td>
-                                            <td><button className="button button-details" onClick={() => this.detailOrder(order)}></button></td>
+                                            <td><button className="fas fa-eye" onClick={() => this.detailOrder(order)}></button></td>
                                             <td>{order.salesman}</td>
-                                            <td><button className="button button-edit" onClick={this.registerOrder}></button></td>
-                                            <td><button className="button button-remove"></button></td>
+                                            <td><button className="fas fa-edit" onClick={this.registerOrder}></button></td>
+                                            <td><button className="fas fa-trash-alt"></button></td>
                                         </tr>
                                     ))}
                                 </tbody>
@@ -93,6 +110,9 @@ class OrdersList extends React.Component{
             component = <OrderForm />;   
         }
         else if(this.state.selectedComponent === 3){
+            component =  <OrderDetail order={this.state.selectedOrder}/>;
+        }
+        else if(this.state.selectedComponent === 4){
             component =  <OrderDetail order={this.state.selectedOrder}/>;
         }
 
