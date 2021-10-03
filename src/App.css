@@ -1,0 +1,10 @@
+.App {
+    margin:0;
+    padding: 0;
+    background: url("./Media/Fondo.jpg") no-repeat center top;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 16px;
+}
