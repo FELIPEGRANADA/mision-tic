@@ -24,23 +24,13 @@
     cursor: pointer;
 }
 
-.button{
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    background-size: cover;
-    width: 40px;
-    height: 20px;
-    font-size: 16px;
-    cursor: pointer;
+thead tr{
+    font-size: 18px;
+    text-align: center;
 }
 
-.button-edit{  
-    background:  url("../Media/button_Edit.png") no-repeat center top; 
-}
-
-.button-remove{
-    background:  url("../Media/button_Remove.png") no-repeat center top;
+tbody tr{
+    text-align: center;
 }
 
 .table-bordered {

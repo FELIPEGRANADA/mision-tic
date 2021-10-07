@@ -18,6 +18,7 @@ class OrdersList extends React.Component{
     constructor(props) {
         super(props);
         this.registerOrder = this.registerOrder.bind(this);
+        this.showSearchFilter = this.showSearchFilter.bind(this);
         this.state = {
             selectedComponent: 1,
             data: dataLoad,
@@ -50,29 +51,30 @@ class OrdersList extends React.Component{
                       });
     }
 
+    // Show search filter
+    showSearchFilter(){
+        this.setState({showHideSearchFilter: !this.state.showHideSearchFilter});
+    }
+
     // Method Render the component
     render() {
         let component;
         const x = this.state.showHideSearchFilter;
-        var showSearchFilter= e =>
-        {
-            this.setState({showHideSearchFilter: !this.state.showHideSearchFilter});
-        }
         if(this.state.selectedComponent === 1){
             component = <div className="ordersList-box">
                             <div>
                                 <h1>Orders</h1>
-                                <button className="new-order" onClick={this.registerOrder}>New +</button>
-                            <button className="Search-Order" onClick={showSearchFilter}>{x ? 'Seraching By':'Serach'}</button>
-                            {
-                                x && (
-                                <select name="searchFilter" placeholder="Atribute">
-                                    <option value="Code">Code</option>
-                                    <option value="Identification">Identification</option>
-                                    <option value="Name">Name</option>
-                                </select>
-                                )
-                            }
+                                <button className="button-header" onClick={this.registerOrder}>New +</button>
+                                <button className="button-header search" onClick={this.showSearchFilter}>{x ? 'Searching By':'Search'}</button>
+                                {
+                                    x && (
+                                    <select name="searchFilter" placeholder="Atribute">
+                                        <option value="Code">Code</option>
+                                        <option value="Identification">Identification</option>
+                                        <option value="Name">Name</option>
+                                    </select>
+                                    )
+                                }
                             </div>
                             <table className="table-bordered">
                                 <thead>
