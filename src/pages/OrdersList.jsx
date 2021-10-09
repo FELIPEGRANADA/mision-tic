@@ -114,9 +114,6 @@ class OrdersList extends React.Component{
         else if(this.state.selectedComponent === 3){
             component =  <OrderDetail order={this.state.selectedOrder}/>;
         }
-        else if(this.state.selectedComponent === 4){
-            component =  <OrderDetail order={this.state.selectedOrder}/>;
-        }
 
         return(
             component   

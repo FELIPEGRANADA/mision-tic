@@ -26,6 +26,9 @@
     box-sizing: border-box;
 }
 
+.read-only-input{
+    background:#202020;   
+}
 
 .button-box{
     text-align: center;
