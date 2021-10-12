@@ -1,0 +1,56 @@
+.menu-box{
+    width: 100%;
+    height: 100%;  
+    box-sizing: border-box;
+    padding: 10px 0px;
+    text-align: center;
+    display: block;
+}
+
+.menuitem-box{
+    width: 20%;
+    height: 100%;
+    background-color: rgb(34,34,34, 0.6);
+    color: #fff;    
+    box-sizing: border-box;
+    padding: 30px 30px;
+    text-align: center;
+    display: block;
+    float:left
+}
+
+.content-box{
+    width: 80%;
+    height: 100%;  
+    box-sizing: border-box;
+    padding: 0px 0px;
+    text-align: center;
+    display: block;
+    float:left
+}
+
+.menu-button{
+    border: none;
+    outline: none;
+    background: #3E0668 ;
+    color: #fff;
+    border-radius: 4px;
+    margin: 0em 0em 2px 0em;
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    cursor: pointer;    
+}
+
+.menu-selected{
+    border: none;
+    outline: none;
+    background: #8f1ce7 ;
+    color: #fff;
+    border-radius: 4px;
+    margin: 0em 0em 2px 0em;
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    cursor: pointer;    
+}
