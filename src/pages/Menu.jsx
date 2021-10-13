@@ -4,6 +4,7 @@ import logo from '../Media/Logo.png';
 import OrdersList from './OrdersList';
 import ProductsList from './ProductsList';
 import UsersList from './UsersList';
+import LogoutButton from '../components/LogoutButton';
 
 // Class Menu Component 
 class Menu extends React.Component{
@@ -56,7 +57,8 @@ class Menu extends React.Component{
                         <img className= "logo" src ={logo} alt="Terrier beverages logo"/>
                         <button className={this.state.classOrders} onClick={this.showOrders}>Orders</button>
                         <button className={this.state.classProducts} onClick={this.showProducts}>Products</button>
-                        <button className={this.state.classUsers} onClick={this.showUsers}>Users</button>           
+                        <button className={this.state.classUsers} onClick={this.showUsers}>Users</button>
+                        <LogoutButton />           
                     </div>
                     <div className="content-box">
                         {this.state.selectedMenu}                       
