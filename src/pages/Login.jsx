@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/Login.css';
-import Menu from './Menu';
 import logo from '../Media/Logo.png';
 import LoginButton from '../components/LoginButton';
 

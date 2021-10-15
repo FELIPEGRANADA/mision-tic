@@ -5,10 +5,10 @@ import OrdersList from './OrdersList';
 import ProductsList from './ProductsList';
 import UsersList from './UsersList';
 import LogoutButton from '../components/LogoutButton';
+import PrivateRoute from '../components/PrivateRoute';
 
 // Class Menu Component 
 class Menu extends React.Component{
-
     // Constructor of the class
     constructor(props) {
         super(props);
@@ -52,18 +52,20 @@ class Menu extends React.Component{
     // Method Render the component
     render() {
             return (
+                <PrivateRoute>
                 <div className="menu-box">
                     <div className="menuitem-box">
                         <img className= "logo" src ={logo} alt="Terrier beverages logo"/>
                         <button className={this.state.classOrders} onClick={this.showOrders}>Orders</button>
                         <button className={this.state.classProducts} onClick={this.showProducts}>Products</button>
-                        <button className={this.state.classUsers} onClick={this.showUsers}>Users</button>
-                        <LogoutButton />           
+                        <button className={this.state.classUsers} onClick={this.showUsers}>Users</button>     
                     </div>
+                    <LogoutButton />     
                     <div className="content-box">
                         {this.state.selectedMenu}                       
                     </div>
-                </div>             
+                </div>       
+            </PrivateRoute>      
             );
 
     }
