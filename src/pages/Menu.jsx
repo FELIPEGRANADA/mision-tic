@@ -7,6 +7,7 @@ import UsersList from './UsersList';
 import LogoutButton from '../components/LogoutButton';
 import PrivateRoute from '../components/PrivateRoute';
 
+
 // Class Menu Component 
 class Menu extends React.Component{
     // Constructor of the class
@@ -52,7 +53,7 @@ class Menu extends React.Component{
     // Method Render the component
     render() {
             return (
-                <PrivateRoute>
+              <PrivateRoute>
                 <div className="menu-box">
                     <div className="menuitem-box">
                         <img className= "logo" src ={logo} alt="Terrier beverages logo"/>
@@ -64,8 +65,8 @@ class Menu extends React.Component{
                     <div className="content-box">
                         {this.state.selectedMenu}                       
                     </div>
-                </div>       
-            </PrivateRoute>      
+                </div>
+              </PrivateRoute>            
             );
 
     }
