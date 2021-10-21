@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/UsersList.css';
+import '../../styles/UsersList.css';
 import UserForm from './UserForm';
 
 // Constants to connect to database

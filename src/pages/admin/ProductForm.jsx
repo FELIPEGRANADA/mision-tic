@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/ProductForm.css';
+import '../../styles/ProductForm.css';
 import ProductsList from './ProductsList';
 
 // Constants to connect to database

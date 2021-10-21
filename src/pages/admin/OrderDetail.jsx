@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/OrderDetail.css';
+import '../../styles/OrderDetail.css';
 import OrdersList from './OrdersList';
 
 // Class OrderDetail Component 
