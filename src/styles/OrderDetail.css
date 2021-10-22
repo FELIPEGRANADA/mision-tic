@@ -17,6 +17,20 @@
     caption-side: top;
  }
 
+ .orderDetail-input{
+    width: 20%;
+    height: 35px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background:#454545;
+    color:#fff;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    padding: 5px 5px;
+    box-sizing: border-box;
+}
+
 .orderDetail-button{
     border: none;
     outline: none;

@@ -111,8 +111,8 @@ class ProductForm extends React.Component{
         if(this.state.selectedComponent === 1){
             component = <div className="productForm-box">
                             {formTitle}
-                            <label><b>Code</b></label> 
-                            <form onSubmit={formEvent}> 
+                            <form onSubmit={formEvent}>
+                                <label><b>Code</b></label> 
                                 {codeInput}
                                 <label><b>Description</b></label> 
                                 <input className="productForm-input" 
