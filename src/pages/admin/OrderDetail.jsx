@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/OrderDetail.css';
-import OrderForm from './OrderForm';
+import '../../styles/OrderDetail.css';
 import OrdersList from './OrdersList';
+import OrderForm from './OrderForm';
 
 // Constants to connect to database
 const BASE_URL = process.env.REACT_APP_API_URL;

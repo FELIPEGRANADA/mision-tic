@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/OrderForm.css';
+import '../../styles/OrderForm.css';
 import OrdersList from './OrdersList';
 import OrderDetail from './OrderDetail';
 
