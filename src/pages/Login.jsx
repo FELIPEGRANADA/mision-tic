@@ -4,8 +4,7 @@ import logo from '../Media/Logo.png';
 import LoginButton from '../components/LoginButton';
 
 
-const Login = () => {
-    
+const Login = () => {   
     
     return (
         <div className="login-box">
